@@ -1,3 +1,4 @@
+import allure
 import pytest
 from locators import main_page_locators
 from page_objects.main_page import MainPage
@@ -9,6 +10,8 @@ from data import Urls
 
 class TestModuleQuestionsAboutImportant:
 
+    @allure.title("Выпадающий список в разделе «Вопросы о важном»")
+    @allure.description("При нажатии на стрелочку, открывается соответствующий текст")
     @pytest.mark.parametrize(
         "question, answer, true_answer",
         [
@@ -68,6 +71,8 @@ class TestModuleQuestionsAboutImportant:
 
 class TestNavigationOnSite:
 
+    @allure.title("Переход на главную страницу при нажатии на логотип 'Самокат'")
+    @allure.description("При нажатии на логотип «Самоката», попадёшь на главную страницу «Самоката»")
     def test_go_to_main_page_click_scooter_logo(self, driver):
         """Проверяем попадание на главную страницу, нажав лого Самокат"""
         navigation = NavigationOnSite(driver)
@@ -75,6 +80,8 @@ class TestNavigationOnSite:
         navigation.click_logo_scooter()
         assert navigation.get_current_url() == Urls.MAIN_PAGE_SCOOTER
 
+    @allure.title("Редирект на страницу Дзен при нажатии на логотип 'Яндекс'")
+    @allure.description("При нажатии на логотип Яндекса, в новом окне через редирект откроется главная страница Дзена")
     def test_click_yandex_logo_redirect_on_dzen(self, driver):
         """Проверяем редирект на страницу Дзен"""
         navigation = NavigationOnSite(driver)

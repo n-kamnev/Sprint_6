@@ -3,10 +3,15 @@ from data import ClientData2
 from locators import order_scooter_locators
 from page_objects.order_scooter_page import OrderScooter
 import pytest
+import allure
 
 
 class TestOrderScooter:
 
+    @allure.title("Заказ самоката»")
+    @allure.description(
+        "Проверка всего флоу позитивного сценария с двумя наборами данных. Проверка точки входа в сценарий, "
+        "их две: кнопка «Заказать» вверху страницы и внизу")
     @pytest.mark.parametrize(
         "name, surname, address, station, phone, date, rent, color, comment",
         [
