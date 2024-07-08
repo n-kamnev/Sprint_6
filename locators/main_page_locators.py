@@ -1,0 +1,18 @@
+from selenium.webdriver.common.by import By
+
+FIRST_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-0']")
+FIRST_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-0']")
+SECOND_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-1']")
+SECOND_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-1']")
+THIRD_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-2']")
+THIRD_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-2']")
+FOURTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-3']")
+FOURTH_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-3']")
+FIFTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-4']")
+FIFTH_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-4']")
+SIXTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-5']")
+SIXTH_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-5']")
+SEVENTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-6']")
+SEVENTH_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-6']")
+EIGHTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-7']")
+EIGHTH_QUESTION_OPEN = (By.XPATH, "//div[@id ='accordion__panel-7']")
