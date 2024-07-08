@@ -2,7 +2,6 @@ import pytest
 from locators import main_page_locators
 from page_objects.main_page import MainPage
 from page_objects.main_page import NavigationOnSite
-from conftest import driver
 from data import ModuleQuestionsAboutImportantAnswers
 from selenium.webdriver.common.by import By
 from data import Urls
@@ -76,10 +75,10 @@ class TestNavigationOnSite:
         navigation.click_logo_scooter()
         assert navigation.get_current_url() == Urls.MAIN_PAGE_SCOOTER
 
-    # def test_click_yandex_logo_redirect_on_dzen(self, driver):
-    #     """Проверяем редирект на страницу Дзен"""
-    #     navigation = NavigationOnSite(driver)
-    #     navigation.click_yandex_logo()
-    #     navigation.switch_on_tab()
-    #     navigation.wait_visibility_search_button()
-    #     assert navigation.get_current_url() == Urls.REDIRECT_DZEN
+    def test_click_yandex_logo_redirect_on_dzen(self, driver):
+        """Проверяем редирект на страницу Дзен"""
+        navigation = NavigationOnSite(driver)
+        navigation.click_yandex_logo()
+        navigation.switch_on_tab()
+        navigation.wait_visibility_search_button()
+        assert navigation.get_current_url() == Urls.REDIRECT_DZEN

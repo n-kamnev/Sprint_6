@@ -8,12 +8,10 @@ PHONE_FIELD = (By.XPATH, "//input[contains(@placeholder,'* Телефон: на 
 ORDER_BUTTON_UPPER = (By.XPATH, "//button[@class='Button_Button__ra12g']")
 STATION_SOKOLNIKI = (By.XPATH, "//div[@class= 'Order_Text__2broi' and contains(text(), 'Сокольники')]")
 STATION_OHOTNYI_RYAD = (By.XPATH, "//div[@class= 'Order_Text__2broi' and contains(text(), 'Охотный Ряд')]")
-NEXT_BUTTON = (By.XPATH, "//button[contains(.,'Далее')]")
+NEXT_BUTTON = (By.XPATH, "//button[text() = 'Далее']")
 DATE_FIELD = (By.XPATH, "//input[contains(@placeholder,'* Когда привезти самокат')]")
-DATA1_CHOOSE = (
-    By.XPATH, "//div[@class= 'react-datepicker__day react-datepicker__day--005 react-datepicker__day--weekend']")
-DATA2_CHOOSE = (
-    By.XPATH, "//div[@class= 'react-datepicker__day react-datepicker__day--012 react-datepicker__day--weekend']")
+DATA1_CHOOSE = (By.XPATH, "//div[@class= 'react-datepicker__week'][1]/div[1]")
+DATA2_CHOOSE = (By.XPATH, "//div[@class= 'react-datepicker__week'][2]/div[3]")
 RENTAL_TIME_FIELD = (By.XPATH, "//div[@aria-haspopup='listbox']")
 RENT_TWO_DAYS = (By.XPATH, "//div[@class= 'Dropdown-option' and contains(text(), 'двое суток')]")
 RENT_FIVE_DAYS = (By.XPATH, "//div[@class= 'Dropdown-option' and contains(text(), 'пятеро суток')]")

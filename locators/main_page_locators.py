@@ -20,4 +20,4 @@ SCOOTER_IMG = (By.XPATH, "//img[@src= '/assets/scooter.png']")
 SCOOTER_LOGO = (By.XPATH, "//img[@alt='Scooter']")
 TOP_ORDER_BUTTON = (By.XPATH, "//button[@class='Button_Button__ra12g']")
 YANDEX_LOGO = (By.XPATH, "//img[contains(@alt,'Yandex')]")
-DZEN_SEARCH_BUTTON = (By.XPATH, "//button[contains(.,'Найти')]")  # хз что это
+DZEN_SEARCH_BUTTON = (By.XPATH, "//button[contains(.,'Найти')]")

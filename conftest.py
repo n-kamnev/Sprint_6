@@ -3,7 +3,7 @@ import pytest
 from data import Urls
 
 firefox_options = webdriver.FirefoxOptions()
-firefox_options.add_argument("--headless")
+# firefox_options.add_argument("--headless")
 firefox_options.add_argument("--ignore-certificate-errors")
 firefox_options.add_argument("--disable-cache")
 firefox_options.add_argument("--disable-blink-features=AutomationControlled")
