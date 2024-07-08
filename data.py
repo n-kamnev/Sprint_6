@@ -1,6 +1,7 @@
 class Urls:
     """Класс для хранения ссылок на сайты"""
     MAIN_PAGE_SCOOTER = 'https://qa-scooter.praktikum-services.ru/'
+    REDIRECT_DZEN = 'https://dzen.ru/?yredirect=true&is_autologin_ya=true'
 
 
 class ModuleQuestionsAboutImportantAnswers:
@@ -19,3 +20,19 @@ class ModuleQuestionsAboutImportantAnswers:
     SEVENTH_QUESTION_ANSWER = ('Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не '
                                'попросим. Все же свои.')
     EIGHT_QUESTION_ANSWER = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'
+
+
+class ClientData1:
+    NAME1 = 'Николай'
+    SURNAME1 = 'Камнев'
+    ADDRESS1 = 'Москва, ул. Абракадабра. д. 8'
+    PHONE1 = '+73457775566'
+    COMMENT1 = 'Чтобы был новеньким'
+
+
+class ClientData2:
+    NAME2 = 'Зелебоба'
+    SURNAME2 = 'Яндексов'
+    ADDRESS2 = 'Москва, ул. Алилуева улица. д. 11'
+    PHONE2 = '+79789875132'
+    COMMENT2 = 'Просьба звонить за час'

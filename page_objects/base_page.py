@@ -30,3 +30,13 @@ class BasePage:
     def scroll_element(self, element):
         """Скрол к элементу"""
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    @pytest.mark.usefixtures('driver')
+    def receive_current_url(self):
+        """Получение текущего URL"""
+        return self.driver.current_url
+
+    @pytest.mark.usefixtures('driver')
+    def switch_to_window(self):
+        """Переключение на другое окно"""
+        return self.driver.switch_to.window(self.driver.window_handles[1])

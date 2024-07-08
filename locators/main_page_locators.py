@@ -16,3 +16,8 @@ SEVENTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-6']")
 SEVENTH_QUESTION_OPEN = (By.XPATH, "//div[@id = 'accordion__panel-6']/p")
 EIGHTH_QUESTION = (By.XPATH, "//div[@id = 'accordion__heading-7']")
 EIGHTH_QUESTION_OPEN = (By.XPATH, "//div[@id ='accordion__panel-7']/p")
+SCOOTER_IMG = (By.XPATH, "//img[@src= '/assets/scooter.png']")
+SCOOTER_LOGO = (By.XPATH, "//img[@alt='Scooter']")
+TOP_ORDER_BUTTON = (By.XPATH, "//button[@class='Button_Button__ra12g']")
+YANDEX_LOGO = (By.XPATH, "//img[contains(@alt,'Yandex')]")
+DZEN_SEARCH_BUTTON = (By.XPATH, "//button[contains(.,'Найти')]")  # хз что это
