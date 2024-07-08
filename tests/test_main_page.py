@@ -3,6 +3,7 @@ from locators import main_page_locators
 from page_objects.main_page import MainPage
 from conftest import driver
 from data import ModuleQuestionsAboutImportantAnswers
+from selenium.webdriver.common.by import By
 
 
 class TestModuleQuestionsAboutImportant:
@@ -56,6 +57,9 @@ class TestModuleQuestionsAboutImportant:
         """Тестирование выпадающего списка в блоке 'Вопросы о важном' на главной странице"""
         question_main_page = MainPage(driver)
         question_main_page.scroll()
+        button = question_main_page.wait_visibility_element((By.XPATH, "//div[@class='accordion__button']"))
+        question_main_page.scroll_element(
+            button)  # если убрать 60 и 61 строку? то программа будет работать не стабильно - не понимаю почему так
         question_main_page.wait_visibility_element(question)
         question_main_page.click_on_the_question(question)
         assert question_main_page.return_the_response_text(answer) == true_answer, "Неправильный ответ!!!"

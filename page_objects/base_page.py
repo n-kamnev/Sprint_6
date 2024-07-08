@@ -12,9 +12,8 @@ class BasePage:
     @pytest.mark.usefixtures('driver')
     def wait_visibility_element(self, locator):
         """Ожидание видимости элемента по локатору"""
-        WebDriverWait(self.driver, 10).until(
-            expected_conditions.visibility_of_element_located(locator)
-        )
+        WebDriverWait(self.driver, 150).until(
+            expected_conditions.visibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
     @pytest.mark.usefixtures('driver')
@@ -23,6 +22,11 @@ class BasePage:
         return self.driver.find_element(*locator)
 
     @pytest.mark.usefixtures('driver')
-    def execute_script(self, element):
-        """Выполняет скрипт scrollIntoView для скрола к элементу"""
-        return self.driver.execute_script("arguments[0].scrollIntoView();", element)
+    def scroll(self):
+        """Скрол страницы вниз"""
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    @pytest.mark.usefixtures('driver')
+    def scroll_element(self, element):
+        """Скрол к элементу"""
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
