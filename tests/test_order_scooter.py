@@ -1,7 +1,7 @@
 from data import ClientData1
 from data import ClientData2
+from data import NameButton
 from locators import order_scooter_locators
-from page_objects.order_scooter_page import OrderScooter
 import pytest
 import allure
 
@@ -40,21 +40,19 @@ class TestOrderScooter:
         ],
     )
     def test_order_scooter(
-            self, driver, name, surname, address, station, phone, date, rent, color, comment
+            self, page_two, name, surname, address, station, phone, date, rent, color, comment
     ):
-        """Тестовый заказ самоката"""
-        order_scooter_page = OrderScooter(driver)
-        order_scooter_page.click_order_button_upper()
-        order_scooter_page.set_name_field(name)
-        order_scooter_page.set_surname_field(surname)
-        order_scooter_page.set_address_field(address)
-        order_scooter_page.set_metro_station(station)
-        order_scooter_page.set_phone_field(phone)
-        order_scooter_page.click_next_button()
-        order_scooter_page.set_delivery_date(date)
-        order_scooter_page.set_rental_time(rent)
-        order_scooter_page.set_color_scooter(color)
-        order_scooter_page.set_comment(comment)
-        order_scooter_page.click_order_button_lower()
-        order_scooter_page.click_accept_button()
-        assert order_scooter_page.get_text_status_button() == "Посмотреть статус", "Отсутствует кнопка 'Посмотреть'"
+        page_two.click_order_button_upper()
+        page_two.set_name_field(name)
+        page_two.set_surname_field(surname)
+        page_two.set_address_field(address)
+        page_two.set_metro_station(station)
+        page_two.set_phone_field(phone)
+        page_two.click_next_button()
+        page_two.set_delivery_date(date)
+        page_two.set_rental_time(rent)
+        page_two.set_color_scooter(color)
+        page_two.set_comment(comment)
+        page_two.click_order_button_lower()
+        page_two.click_accept_button()
+        assert page_two.get_text_status_button() == NameButton.NAME_BUTTON, "Отсутствует кнопка 'Посмотреть'"

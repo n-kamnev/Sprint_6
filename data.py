@@ -36,3 +36,7 @@ class ClientData2:
     ADDRESS2 = 'Москва, ул. Алилуева улица. д. 11'
     PHONE2 = '89789875132'
     COMMENT2 = 'Просьба звонить за час'
+
+
+class NameButton:
+    NAME_BUTTON = 'Посмотреть статус'
